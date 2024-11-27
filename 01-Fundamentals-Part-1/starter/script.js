@@ -1,4 +1,4 @@
-// Values and Variables
+/*// Values and Variables
 let js = "amazing";
 // if (js === "amazing") alert("JavaScript if FUN!");
 // console.log(40 + 8 + 23 - 10);
@@ -22,7 +22,7 @@ console.log(myCurrentJob);
 // Constant variable 
 const birthYear = 1991;
 console.log(birthYear);
-
+*/
 
 /*// Data Types
 let javaScriptIsFun = true;
@@ -43,3 +43,53 @@ console.log(typeof year);
 year = 1991;
 console.log(typeof year);
 */
+
+/*// Basic math Operators
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+console.log(ageJonas, ageSarah);
+
+console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
+// 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
+
+const firstName = "Nico";
+const lastName = "van Biljon";
+console.log(firstName + " " + lastName);
+
+// Assignment operators
+let x = 10 + 5; // 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+x++; // x = x + 1 = 101
+x--; // x = x - 1 = 100
+x--; // x = x - 1 = 99
+console.log(x);
+
+// Comparison operators
+console.log(ageJonas > ageSarah); // >, <, >=, <=
+console.log(ageSarah >= 18);
+console.log(ageSarah <= 15);
+
+const isFullAge = ageSarah >= 18;
+
+console.log(now - 1991 > now - 2018);
+*/
+
+// Operator Precedence: 
+// how operators gets executed = subtract first then the comparison
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+
+console.log(now - 1991 > now - 2018);
+
+console.log(25 - 10 - 5);
+
+let x, y;
+x = y = 25 -10 - 5; // subtract first then assignment x = y = 10, x = 10
+console.log(x, y);
+
+const averageAge =  (ageJonas + ageSarah) / 2; // parentheses first then division
+console.log(ageJonas, ageSarah, averageAge);
+
