@@ -78,7 +78,7 @@ console.log(now - 1991 > now - 2018);
 
 // Operator Precedence: 
 // how operators gets executed = subtract first then the comparison
-const now = 2037;
+/*const now = 2037;
 const ageJonas = now - 1991;
 const ageSarah = now - 2018;
 
@@ -92,4 +92,48 @@ console.log(x, y);
 
 const averageAge =  (ageJonas + ageSarah) / 2; // parentheses first then division
 console.log(ageJonas, ageSarah, averageAge);
+*/
 
+// Strings and template literals
+/* const firstName = "Nico";
+const job = "Spare Parts Coordinator";
+const birthYear = 1974;
+const year = 2037;
+
+const nico = "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+console.log(nico);
+
+const nicoNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+console.log(nicoNew);
+
+console.log(`Just a regular string....`);
+
+// Create new lines
+console.log("String with \n\
+multiple \n\
+lines");
+
+console.log(`String with
+multiple
+lines`)  
+*/
+
+// Taking decisions: If / else statements
+const age = 15;
+
+if (age >= 18) {
+    console.log("Sarah can start driving license 🚗");
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+}
+
+const birthYear = 2012;
+
+let century;
+if (birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century);
