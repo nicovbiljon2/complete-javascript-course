@@ -1,7 +1,9 @@
-JavaScript Fundamentals - Part 1
-Learned about values, variables and the 7 data types.
+Learning JavaScript Fundamentals - Part 1:
+What values, variables are and the 7 data types in JavaScript
 How to create variables and always use descriptive names for your variables. 
-Learned to use "typeof" to print out what data type each value is.
-Learned about basic operators and how they work.
-Learned how to use template literals and if/else statement to make decisions. 
+Use "typeof" to print out what data type each value is.
+How to use basic operators and how they work.
+Use template literals and if/else statement to make decisions. 
+Type conversions and coercion and how they work.
+Truthy and Falsy concept and there is only falsy values: 0, "", undefined, null, NaN 
 Will keep on update the README file as I progress on with Part 1.

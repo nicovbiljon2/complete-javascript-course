@@ -119,7 +119,7 @@ lines`)
 */
 
 // Taking decisions: If / else statements
-const age = 15;
+/* const age = 15;
 
 if (age >= 18) {
     console.log("Sarah can start driving license 🚗");
@@ -137,3 +137,49 @@ if (birthYear <= 2000) {
     century = 21;
 }
 console.log(century);
+*/
+
+// Type Conversion 
+/*const inputYear = "1991";
+// convert a string to a number
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number("Nico"));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+// Type Coercion
+console.log("I am " + 23 + " year old");
+console.log("23" - "10" - 3);
+console.log("23" * "2");
+console.log("23" / "2");
+
+let n = "1" + 1;
+n = n -1; 
+console.log(n);
+*/
+
+// Truthy and Falsy Values
+// 5 falsy values: 0, "", undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Nico"));
+console.log(Boolean({}));
+console.log(Boolean(""));
+
+const money = 100;
+if (money) {
+    console.log("Don't spend it all :)");
+} else {
+    console.log("You should get a job!");
+}
+
+let height;
+if (height) {
+    console.log("YAY! Height is defined");
+} else {
+    console.log("Height is UNDEFINED")
+}
