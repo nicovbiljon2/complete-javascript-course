@@ -6,4 +6,5 @@ How to use basic operators and how they work.
 Use template literals and if/else statement to make decisions. 
 Type conversions and coercion and how they work.
 Truthy and Falsy concept and there is only falsy values: 0, "", undefined, null, NaN 
+Practice with equality operators, boolean logic and logical operators to test which statement is true or false. 
 Will keep on update the README file as I progress on with Part 1.
