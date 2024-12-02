@@ -7,4 +7,6 @@ Use template literals and if/else statement to make decisions.
 Type conversions and coercion and how they work.
 Truthy and Falsy concept and there is only falsy values: 0, "", undefined, null, NaN 
 Practice with equality operators, boolean logic and logical operators to test which statement is true or false. 
-Will keep on update the README file as I progress on with Part 1.
+Practice with the switch statement. It is easy to debug and maintain. It is also easier to read especially if you have a lot of conditions to check. The code will be less than writing out the if else statements. 
+It is better to use an ternary operator for quick decision you need to make. It is easier to read and understand. 
+I completed JavaScript Fundamentals Part 1 and learned quite a lot. I can see there is still a lot to learn. 
