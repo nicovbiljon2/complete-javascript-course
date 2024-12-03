@@ -120,9 +120,9 @@ Hints:
 § To calculate 20% of a value, simply multiply it by 20/100 = 0.2
 § Value X is between 50 and 300, if it's >= 50 && <= 300 */
 
-const bill = 300;
+const bill = 275;
 
-const tip = bill >= 50 && bill <= 300 ? 15 / 100 * bill : 20 / 100 * bill;
+const tip = bill >= 50 && bill <= 300 ? (15 / 100) * bill : (20 / 100) * bill;
 
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${(bill + tip)}.`);
 
