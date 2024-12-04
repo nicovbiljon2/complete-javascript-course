@@ -11,7 +11,7 @@
 
 // Functions 
 
-function logger() {
+/* function logger() {
     console.log("My name is Nico");
 }
 
@@ -30,4 +30,21 @@ console.log(appleJuice);
 console.log(fruitProcessor(5, 0)); // log the result directly to the console
 
 const appleOrangeJuice = fruitProcessor(2, 4);
-console.log(appleOrangeJuice);
+console.log(appleOrangeJuice); */
+
+// Function declaration
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
+}
+
+const age1 = calcAge1(1991);
+
+// Function expression (expression produce a value)
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const age2 = calcAge2(1991);
+
+console.log(age1);
+console.log(age2);
