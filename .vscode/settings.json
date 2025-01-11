@@ -2,5 +2,6 @@
     "cSpell.words": [
         "Northam",
         "percentageunited"
-    ]
+    ],
+    "files.autoSave": "onFocusChange"
 }
