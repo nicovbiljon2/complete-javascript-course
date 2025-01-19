@@ -83,7 +83,7 @@ function fruitProcessor(apples, oranges) {
 
 console.log(fruitProcessor(2, 3));*/
 
-const calcAge = function(birthYear) {
+/* const calcAge = function(birthYear) {
     return 2037 - birthYear;
 }
 
@@ -103,4 +103,39 @@ const yearsUntilRetirement = function(birthYear, firstName) {
 }
 
 console.log(yearsUntilRetirement(1991, "Nico"));
-console.log(yearsUntilRetirement(1950, "Bob"));
+console.log(yearsUntilRetirement(1950, "Bob"));*/
+
+// Data Structures 
+// Arrays 
+const friends = ["Michael", "Steven", "Peter"];
+console.log(friends);
+
+const years = new Array(1661, 1984, 2008, 2020);
+console.log(years)
+
+console.log(friends[0]); // indexing print the first name in the array
+console.log(friends[2]);
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = "Jay"; // updating the array (mutate)
+console.log(friends);
+
+const firstName = "Nico"
+const nico = [firstName, "van Biljon", 2037 - 1986, "software developer student", friends];
+console.log(nico);
+
+// Array exercise
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const year = [1990, 1967, 2002, 2010, 2018];
+
+const age1 = calcAge(year[0]);
+const age2 = calcAge(year[1]);
+const age3 = calcAge(year[year.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [calcAge(year[0]), calcAge(year[1]), calcAge(year[year.length - 1])];
+console.log(ages);

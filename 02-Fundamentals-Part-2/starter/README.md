@@ -3,3 +3,5 @@ Functions are a fundamental part of programming. It is a block of code you can r
 how to activate 'use strict' and how it can help you identify possible bugs in your code and to fix the errors. 
 Learned how to write function declaration vs function expression. 
 Learned about arrow functions and practice more functions.
+Went over JavaScript fundamentals part 1 content.
+learned about Array data structures and indexing. 
