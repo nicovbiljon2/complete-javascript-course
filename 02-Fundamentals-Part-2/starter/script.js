@@ -174,7 +174,7 @@ if (friends.includes ("Steven")) {
 } */
 
 // Objects
-const nico = {
+/* const nico = {
     firstName: "Nico",
     lastName: "van Biljon",
     age: 2037 - 1989,
@@ -205,3 +205,41 @@ console.log(nico);
 
 // challenge 
 console.log(`${nico.firstName} has ${nico.friends.length} friends, and his best friend is called ${nico.friends[0]}`);
+*/
+
+// Object Methods
+const nico = {
+    firstName: "Nico",
+    lastName: "van Biljon",
+    birthYear: 1986,
+    job: "Spare Parts Sales",
+    friends: ["Milton", "Wessel", "Dean"],
+    hasDriversLicense: true,
+
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthYear;
+    // }
+    // calcAge: function () {
+    //     // console.log(this);
+    //     return 2037 - this.birthYear
+    // }
+
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? "a" : "b"} driver's license`
+    }
+};
+
+console.log(nico.calcAge());
+
+console.log(nico.age);
+console.log(nico.age);
+console.log(nico.age);
+
+// Challenge
+// "Nico is a 51-year old Spare Parts Sales, and he has a driver's license"
+console.log(nico.getSummary());

@@ -7,3 +7,5 @@ Went over JavaScript fundamentals part 1 content again.
 learned about Array data structures and indexing. 
 Learned about array methods .push, .unshift, .shift, .pop, .indexOf and .includes
 Completed challenge 2# - struggled to get the totals array correct. 
+Learned about objects and how to use the dot and bracket notation to get data from the object and how to add data to the object. 
+Learned how to create an object method and use the "this." special keyword.
