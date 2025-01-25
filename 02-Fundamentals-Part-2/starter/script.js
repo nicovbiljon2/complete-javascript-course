@@ -142,7 +142,7 @@ console.log(ages);*/
 
 // Array methods 
 
-// Add elements
+/* // Add elements
 const friends = ["Michael", "Steven", "Peter"];
 const newLength = friends.push("Jay");
 console.log(friends);
@@ -171,4 +171,37 @@ console.log(friends.includes(23));
 
 if (friends.includes ("Steven")) {
     console.log("You have a friend called Steven");
+} */
+
+// Objects
+const nico = {
+    firstName: "Nico",
+    lastName: "van Biljon",
+    age: 2037 - 1989,
+    job: "Spare Parts Sales",
+    friends: ["Milton", "Wessel", "Dean"]
+};
+
+console.log(nico);
+
+console.log(nico.lastName);
+console.log(nico["lastName"]);
+
+const nameKey = "Name";
+console.log(nico["first" + nameKey]);
+console.log(nico["last" + nameKey]);
+
+const interestedIn = prompt("What do you want to know about Nico? Choose between firstName, lastName, age, job, and friends");
+
+if(nico[interestedIn]) {
+console.log(nico[interestedIn]);
+} else {
+    console.log("Wrong request! Choose between firstName, lastName, age, job, and friends");
 }
+
+nico.location = "South Africa";
+nico["twitter"] = "@nicovanbiljon"; // this is just an example - account don't exist
+console.log(nico);
+
+// challenge 
+console.log(`${nico.firstName} has ${nico.friends.length} friends, and his best friend is called ${nico.friends[0]}`);
