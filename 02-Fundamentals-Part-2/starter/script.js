@@ -208,7 +208,7 @@ console.log(`${nico.firstName} has ${nico.friends.length} friends, and his best 
 */
 
 // Object Methods
-const nico = {
+/* const nico = {
     firstName: "Nico",
     lastName: "van Biljon",
     birthYear: 1986,
@@ -242,4 +242,33 @@ console.log(nico.age);
 
 // Challenge
 // "Nico is a 51-year old Spare Parts Sales, and he has a driver's license"
-console.log(nico.getSummary());
+console.log(nico.getSummary()); */
+
+// Iterations - The for loop
+
+// for loop keeps running while condition is true
+// for(let rep = 1; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+// };
+
+const nico = [
+    "Nico",
+    "van Biljon",
+    2037 - 1986,
+    "Spare Parts Sales",
+    ["Milton", "Wessel", "Dean"],
+    true
+];
+
+const types = [];
+
+for(let i = 0; i < nico.length; i++) {
+    // reading from nico array
+    console.log(nico[i], typeof nico[i]);
+
+    // filling types array
+    // types[i] = typeof nico[i];
+    types.push(typeof nico[i]);
+}
+
+console.log(types);

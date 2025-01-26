@@ -105,6 +105,7 @@ const john = {
     }
 };
 
+// calling the method
 mark.calcBMI();
 console.log(mark.bmi);
 

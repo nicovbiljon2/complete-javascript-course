@@ -10,3 +10,4 @@ Completed challenge 2# - struggled to get the totals array correct.
 Learned about objects and how to use the dot and bracket notation to get data from the object and how to add data to the object. 
 Learned how to create an object method and use the "this." special keyword.
 Completed challenge #3 - had some issues with console logging out the correct sentence. 
+Learned about fro loop and how to iterate through an array
