@@ -272,3 +272,26 @@ for(let i = 0; i < nico.length; i++) {
 }
 
 console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+console.log("---ONLY STRINGS---")
+for (let i = 0; i < nico.length; i++) {
+    if(typeof nico[i] !== "string") continue;
+    console.log(nico[i], typeof nico[i]);
+}
+
+console.log("---BREAK WITH NUMBER---")
+for (let i = 0; i < nico.length; i++) {
+    if(typeof nico[i] === "number") break;
+    console.log(nico[i], typeof nico[i]);
+}
+
