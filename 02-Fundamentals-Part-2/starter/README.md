@@ -10,4 +10,6 @@ Completed challenge 2# - struggled to get the totals array correct.
 Learned about objects and how to use the dot and bracket notation to get data from the object and how to add data to the object. 
 Learned how to create an object method and use the "this." special keyword.
 Completed challenge #3 - had some issues with console logging out the correct sentence. 
-Learned about fro loop and how to iterate through an array
+Learned about fro loop and how to iterate through an array.
+Learned how to create a backward loop and a loop inside a loop. Also learned about the while loop
+Created a rolling the dice using a while loop and Math.random. When the code runs it will randomly selects a number and will keep on executing the while loop until number 6 is rolled then it will break out of the while loop and the program will stop.

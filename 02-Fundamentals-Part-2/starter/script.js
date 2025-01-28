@@ -251,7 +251,7 @@ console.log(nico.getSummary()); */
 //     console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
 // };
 
-const nico = [
+/* const nico = [
     "Nico",
     "van Biljon",
     2037 - 1986,
@@ -293,5 +293,49 @@ console.log("---BREAK WITH NUMBER---")
 for (let i = 0; i < nico.length; i++) {
     if(typeof nico[i] === "number") break;
     console.log(nico[i], typeof nico[i]);
+} */
+
+// Loop backwards in a array
+const nico = [
+    "Nico",
+    "van Biljon",
+    2037 - 1986,
+    "Spare Parts Sales",
+    ["Milton", "Wessel", "Dean"],
+    true
+];
+
+for (let i = nico.length - 1; i >= 0; i--) {
+    console.log(i, nico[i]);
 }
 
+// Create a loop inside a loop
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`---- Starting exercise ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`---- Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♀️`);
+    }
+}
+
+// Create a while loop 
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+}
+
+let rep = 1; 
+while (rep <= 10) {
+    console.log(`WHILE: Lifting weight repetition ${rep} 🏋️‍♀️`);
+    rep++;
+}
+
+// Rolling a dice 
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`Your rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) {
+        console.log("Loop is about to end...");
+    }
+}
