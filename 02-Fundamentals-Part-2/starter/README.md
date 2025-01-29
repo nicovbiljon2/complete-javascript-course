@@ -13,3 +13,5 @@ Completed challenge #3 - had some issues with console logging out the correct se
 Learned about fro loop and how to iterate through an array.
 Learned how to create a backward loop and a loop inside a loop. Also learned about the while loop
 Created a rolling the dice using a while loop and Math.random. When the code runs it will randomly selects a number and will keep on executing the while loop until number 6 is rolled then it will break out of the while loop and the program will stop.
+Completed challenge 4# - I got some of the solutions correct but didn't get the solution for  calculating the tips and totals values inside the for loop correct. I can see I need more practice on it. Will revisit / do this challenge plus the bonus section. 
+Completed this section but I can see I still got a lot to learn and improve on my problem solving skills. 
