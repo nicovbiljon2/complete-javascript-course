@@ -76,3 +76,55 @@ const calcTempAmplitudeNew = function (temp1, temp2) {
 const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
 
 console.log(amplitudeNew);
+
+// Debugging
+const measureKelvin = function () {
+    const measurement = {
+        type: "temp",
+        unit: "celsius",
+        // The problem is with the prompt as it always returns a string
+        // C. Fix
+        // value: Number(prompt("Degrees celsius: ")),
+        value: 10,
+    };
+
+    // B. Find
+    // console.log(measurement);
+    console.table(measurement);
+
+    // console.log(measurement.value);
+    // console.warn(measurement.value);
+    // console.error(measurement.value);
+
+    const kelvin = measurement.value + 273;
+    return kelvin;
+};
+
+// A. Identify the bug
+console.log(measureKelvin());
+
+// Using a debugger
+const calcTempAmplitudeBug = function (temp1, temp2) {
+    const temps = temp1.concat(temp2);
+    console.log(temps);
+
+    // C. Fix because min is equal to zero the min value will always be zero even if the min
+    // value in the array is 1 which should be the min value printed to the console.
+    let max = 0;
+    let min = 0;
+
+    for (let i = 0; i < temps.length; i++) {
+        const curTemp = temps[i];
+        if (typeof curTemp !== "number") continue;
+
+        // B. Find
+        if (curTemp > max) max = curTemp;
+        if (curTemp < min) min = curTemp;
+    }
+    console.log(max, min);
+    return max - min;
+};
+
+const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
+// A. Identify
+console.log(amplitudeBug);
