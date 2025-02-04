@@ -108,7 +108,7 @@ const calcTempAmplitudeBug = function (temp1, temp2) {
     const temps = temp1.concat(temp2);
     console.log(temps);
 
-    // C. Fix because min is equal to zero the min value will always be zero even if the min
+    // C. Fix because min starting point is equal to zero the min value will always be zero even if the min
     // value in the array is 1 which should be the min value printed to the console.
     let max = 0;
     let min = 0;
@@ -118,6 +118,7 @@ const calcTempAmplitudeBug = function (temp1, temp2) {
         if (typeof curTemp !== "number") continue;
 
         // B. Find
+        // debugger;
         if (curTemp > max) max = curTemp;
         if (curTemp < min) min = curTemp;
     }
