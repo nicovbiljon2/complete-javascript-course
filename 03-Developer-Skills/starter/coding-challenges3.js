@@ -44,3 +44,69 @@ const printForecast = function (arr) {
 
 printForecast(arr1);
 printForecast(arr2);
+
+// Coding Challenge #2 With AI
+/* Let's say you're building a time tracking application for freelancers. At Some point in
+building this app, you need a function that receives daily work hours for a certain week,
+and returns:
+1. Total hours worked
+2. Average daily hours
+3. The day with the most hours worked
+4. Number of days worked
+5. Whether the week was full-time (worked 35 hours or more)
+
+Test data: [7.5, 8, 6.5, 0, 8.5, 4, 0] */
+
+// AI Solution
+function analyzeWorkWeek(workHours) {
+    // Check if the array has exactly 7 days
+    if (workHours.length !== 7) {
+        throw new Error("Input array must have exactly 7 days of work hours.");
+    }
+
+    // Array of day names starting with Monday (index 0)
+    const daysOfWeek = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+    ];
+
+    // Calculate total hours worked
+    const totalHours = workHours.reduce((sum, hours) => sum + hours, 0);
+
+    // Calculate average daily hours (rounded to one decimal place)
+    const averageDailyHours = (totalHours / workHours.length).toFixed(1);
+
+    // Find the day with the most hours worked
+    const maxHours = Math.max(...workHours);
+    const dayWithMostHours = daysOfWeek[workHours.indexOf(maxHours)];
+
+    // Calculate the number of days worked (days with more than 0 hours)
+    const daysWorked = workHours.filter(hours => hours > 0).length;
+
+    // Check if the week was full-time (35 or more hours worked)
+    const isFullTime = totalHours >= 35;
+
+    // Return the result as an object
+    return {
+        totalHours,
+        averageDailyHours,
+        dayWithMostHours,
+        daysWorked,
+        isFullTime,
+    };
+}
+
+// Example usage
+const workHours = [7.5, 8, 6.5, 0, 8.5, 4, 0]; // Example array for a week (Mon-Sun)
+const result = analyzeWorkWeek(workHours);
+console.log(result);
+
+// Example usage 2
+const workHours2 = [7.5, 8, 6.5, 0, 8.5]; // Example array for a week (Mon-Sun)
+const result2 = analyzeWorkWeek(workHours2);
+console.log(result2);
