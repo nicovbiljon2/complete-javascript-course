@@ -1,7 +1,4 @@
 {
-    "cSpell.words": [
-        "Northam",
-        "percentageunited"
-    ],
-    "files.autoSave": "onFocusChange"
+  "cSpell.words": ["highscore", "Northam", "percentageunited"],
+  "files.autoSave": "onFocusChange"
 }

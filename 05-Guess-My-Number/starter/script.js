@@ -18,6 +18,8 @@ console.log(document.querySelector(".guess").value);
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 // create a variable to store the score data
 let score = 20;
+// create variable to store the high score data
+let highscore = 0;
 
 // add functionality to the button check
 document.querySelector(".check").addEventListener("click", function () {
@@ -35,6 +37,12 @@ document.querySelector(".check").addEventListener("click", function () {
         // changing the background color and increase the width of the secret number
         document.querySelector("body").style.backgroundColor = "#60b347";
         document.querySelector(".number").style.width = "30rem";
+
+        // adding functionality for the highscore
+        if (score > highscore) {
+            highscore = score;
+            document.querySelector(".highscore").textContent = highscore;
+        }
         // when guess is to high
     } else if (guess > secretNumber) {
         if (score > 1) {
