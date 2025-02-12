@@ -9,3 +9,5 @@ If the score reaches 0 it will prompt the user they lost the game.
 Added JS to change the CSS style. If the user guess correctly the background color will change to green and the guess my number width will increase.
 
 For the challenge #1 i got some sections correct, some of my solutions did not work or finding the correct solution. Will keep on practising until I get ti right.
+
+Learned about the ternary operator and how to use refactoring tp update and remove duplicated (DRY) code.
