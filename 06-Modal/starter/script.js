@@ -20,3 +20,12 @@ for (let i = 0; i < btnsOpenModal.length; i++)
 
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+
+// add a keypress event
+document.addEventListener("keydown", function (event) {
+    console.log(event.key);
+    // if the modal doesn't contain the hidden class then execute the closeModal function
+    if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+        closeModal();
+    }
+});
