@@ -17,7 +17,7 @@ score0El.textContent = 0; // set the text content to zero
 score1El.textContent = 0;
 diceEl.classList.add("hidden");
 
-// create an array to store the scores for player 1 and 2
+// create an array to store the total scores for player 1 and 2
 const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
@@ -44,6 +44,7 @@ btnRollEL.addEventListener("click", function () {
         currentScore = 0;
         // Reassigning the active player, checking if it is player switch from 0 to 1
         activePlayer = activePlayer === 0 ? 1 : 0;
+        // Add the class name to the active player and change the background color of the players
         player0El.classList.toggle("player--active");
         player1El.classList.toggle("player--active");
     }
