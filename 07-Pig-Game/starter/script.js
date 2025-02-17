@@ -12,16 +12,32 @@ const btnNewEL = document.querySelector(".btn--new");
 const btnRollEL = document.querySelector(".btn--roll");
 const btnHoldEL = document.querySelector(".btn--hold");
 
-// Starting the conditions
-score0El.textContent = 0; // set the text content to zero
-score1El.textContent = 0;
-diceEl.classList.add("hidden");
+// Declare variables with no values to make them accessible outside the init function
+let scores;
+let currentScore;
+let activePlayer;
+let playing;
 
-// create an array to store the total scores for player 1 and 2
-const scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
-let playing = true;
+// Create a function to reset the game when new game button is click (scoping)
+const init = function () {
+    // Starting the conditions
+    scores = [0, 0];
+    currentScore = 0;
+    activePlayer = 0;
+    playing = true;
+
+    score0El.textContent = 0;
+    score1El.textContent = 0;
+    current0El.textContent = 0;
+    current1El.textContent = 0;
+
+    diceEl.classList.add("hidden");
+    player0El.classList.remove("player--winner");
+    player1El.classList.remove("player--winner");
+    player0El.classList.add("player--active");
+    player1El.classList.remove("player--active");
+};
+init();
 
 // Create a function to switch players
 const switchPlayer = function () {
@@ -71,7 +87,7 @@ btnHoldEL.addEventListener("click", function () {
         document.getElementById(`score--${activePlayer}`).textContent =
             scores[activePlayer];
         // 2. Check if the player's score is greater or equal to 100
-        if (scores[activePlayer] >= 20) {
+        if (scores[activePlayer] >= 100) {
             // If yes finish the game
             playing = false;
             diceEl.classList.add("hidden");
@@ -82,8 +98,11 @@ btnHoldEL.addEventListener("click", function () {
                 .querySelector(`.player--${activePlayer}`)
                 .classList.remove("player--active");
         } else {
-            // If not switch players
+            // If not switch to the next player
             switchPlayer();
         }
     }
 });
+
+// Implementing functionality to the new game button to reset the game
+btnNewEL.addEventListener("click", init);
