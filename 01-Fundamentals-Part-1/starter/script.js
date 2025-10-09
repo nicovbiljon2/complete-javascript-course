@@ -103,3 +103,4 @@ console.log(x, y);
 
 const avarageAge = (ageNico + ageSarah) / 2;
 console.log(ageNico, ageSarah, avarageAge);
+
