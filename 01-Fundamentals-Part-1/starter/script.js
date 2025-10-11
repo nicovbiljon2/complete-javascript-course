@@ -88,7 +88,7 @@ console.log(ageSarah >= 18);
 const isFullAge = ageSarah >= 18;
 
 console.log(now - 1991 > now - 2018);
-*/
+
 
 const now = 2037;
 const ageNico = now - 1991;
@@ -103,4 +103,50 @@ console.log(x, y);
 
 const avarageAge = (ageNico + ageSarah) / 2;
 console.log(ageNico, ageSarah, avarageAge);
+*/
 
+/* Strings and template literals 
+
+const firstName = "Nico";
+const job = "Spares coordinator";
+const birthYear = 1974;
+const year = 2037;
+
+const nico = "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+console.log(nico);
+
+// Template literal 
+const nicoNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+console.log(nicoNew);
+
+console.log(`Just a regular string...`);
+
+console.log("String with \n\
+multiple \n\
+lines");
+
+console.log(`String
+multiple
+linse`);
+ */
+
+/* Taking descisions if else statements
+ */
+const age = 15;
+
+if (age >= 18) {
+    console.log("Sarah can start driving licence 🚗");
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+}
+
+const birthYear = 2012;
+let century;
+
+if (birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century);
