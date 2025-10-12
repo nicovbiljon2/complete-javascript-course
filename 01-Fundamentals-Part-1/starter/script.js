@@ -131,7 +131,7 @@ linse`);
  */
 
 /* Taking descisions if else statements
- */
+ 
 const age = 15;
 
 if (age >= 18) {
@@ -150,3 +150,64 @@ if (birthYear <= 2000) {
     century = 21;
 }
 console.log(century);
+*/
+
+/* Type conversion and Coercion
+// conversion
+const inputYear = "1991";
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number("Nico"));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+// coercion
+console.log("i am " + 23 + " years old");
+console.log("23" - "10"  - 3);
+*/
+
+/* Truthy and Falsy 
+// 5 falsy values: 0, "", undifiend, null. NaN
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Nico"));
+console.log(Boolean({}));
+console.log(Boolean(""));
+
+const money = 100;
+
+if (money) {
+    console.log("Don't spend it all ;)");
+} else {
+    console.log("You should get a job!");
+}
+
+let height = 0;
+if (height) {
+    console.log("Yay! Height is definded!");
+} else {
+    console.log("Height is Undifined!");
+}
+*/
+
+/*Equality operators */
+const age = "18";
+if (age === 18) console.log("You just became an adult :D (strick)");
+if (age == 18) console.log("You just became an adult :D (loose)");
+
+const favouriteNumber = Number(prompt("What is your favourite number?"));
+console.log(favouriteNumber);
+console.log(typeof(favouriteNumber));
+
+if (favouriteNumber === 23) { // "23" == 23
+    console.log("Cool! 23 is an amazing number");
+} else if (favouriteNumber === 7) {
+    console.log("7 is also a cool number");
+} else if (favouriteNumber === 9) {
+    console.log("9 is also a cool number");
+} else {
+    console.log("Number is not 23 or 7 or 9");
+}
+
+if (favouriteNumber !== 23) console.log("Why not 23?");
