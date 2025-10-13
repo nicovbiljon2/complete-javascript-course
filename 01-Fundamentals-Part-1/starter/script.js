@@ -191,7 +191,7 @@ if (height) {
 }
 */
 
-/*Equality operators */
+/*Equality operators 
 const age = "18";
 if (age === 18) console.log("You just became an adult :D (strick)");
 if (age == 18) console.log("You just became an adult :D (loose)");
@@ -211,3 +211,27 @@ if (favouriteNumber === 23) { // "23" == 23
 }
 
 if (favouriteNumber !== 23) console.log("Why not 23?");
+*/
+
+/*Logical operators */
+const hasDriversLicense = true; // variable A
+const hasGoodVision = true; // variable B
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+// if (hasDriversLicense && hasGoodVision) {
+//     console.log("Sarah is able to drive!");
+// } else {
+//     console.log("Someone else should drive...");
+// }
+
+const isTired = false; // varialbe C
+console.log(hasDriversLicense || hasGoodVision || isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log("Sarah is able to drive!");
+} else {
+    console.log("Someone esle should drive...");
+}
