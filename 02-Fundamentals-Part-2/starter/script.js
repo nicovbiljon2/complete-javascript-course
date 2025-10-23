@@ -155,7 +155,7 @@ const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length -
 console.log(ages);
 */
 
-/* Basic array operations */
+/* Basic array operations 
 const friends = ["Michael", "Steven", "Peter"];
 
 // Add elements to the array
@@ -186,3 +186,39 @@ console.log(friends.includes("23"));
 if (friends.includes("Steven")) {
     console.log("You have a friend called Steven");
 }
+*/
+
+/*Introduction to objects */
+const nico = {
+    firstName: "Nico",
+    lastName: "van Biljon",
+    age: 2037 - 1991,
+    job: "teacher",
+    friends: ["Michael", "Steven", "Peter"]
+};
+
+console.log(nico);
+
+// Dot notation
+console.log(nico.lastName);
+// Brackect notation
+console.log(nico["lastName"]);
+
+const nameKey = "Name";
+console.log(nico["first" + nameKey]);
+console.log(nico["last" + nameKey]);
+
+const interestedIn = prompt("What do you want to know about Nico? Choose between firstName, last Name, age, job, and friends");
+
+if (nico[interestedIn]) {
+console.log(nico[interestedIn]);
+} else {
+    console.log("Wrong request! Choose between firstName, last Name, age, job, and friends");
+}
+
+nico.location = "South Africa";
+nico["twitter"] = "@nico"; // this is just an example
+console.log(nico);
+
+// Challenge
+console.log(`${nico.firstName} has ${nico.friends.length} and his best friend is called ${nico.friends[0]}`);
