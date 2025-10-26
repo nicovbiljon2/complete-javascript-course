@@ -258,6 +258,6 @@ console.log(nico.age);
 console.log(nico.age);
 console.log(nico.age);
 
-// Challenge - write a method to print this out
+// Challenge - write a method getSummary to print this out
 // "Nico is a 46-year old teacher, and he has a driver's license"
 console.log(nico.getSummary());
