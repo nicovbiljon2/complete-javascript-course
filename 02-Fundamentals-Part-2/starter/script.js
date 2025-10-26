@@ -224,7 +224,7 @@ console.log(nico);
 console.log(`${nico.firstName} has ${nico.friends.length} and his best friend is called ${nico.friends[0]}`);
 */
 
-/*Object methods */
+/*Object methods 
 const nico = {
     firstName: "Nico",
     lastName: "van Biljon",
@@ -261,3 +261,60 @@ console.log(nico.age);
 // Challenge - write a method getSummary to print this out
 // "Nico is a 46-year old teacher, and he has a driver's license"
 console.log(nico.getSummary());
+*/
+
+/* Iteration: The for loop */
+
+// for loop keeps running while the condition is TRUE
+// for (let rep = 1; rep <= 20; rep++) {
+//     console.log(`Lifting weights repetition ${rep} 🏋🏻‍♂️`)
+// };
+
+// Looping through an array
+const nicoArray = [
+    "Nico",
+    "van Biljon",
+    2037 - 1991,
+    "spares coordinator",
+    ["Milton", "Wessel", "Dean"],
+    true
+];
+
+const types = []
+
+for (let i = 0; i < nicoArray.length; i++) {
+    // reading from nicoArray
+    console.log(nicoArray[i], typeof nicoArray[i]);
+
+    // Filling types array
+    // types[i] = typeof nicoArray[i];
+    types.push(typeof nicoArray[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [] // empty array
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+console.log("--- ONLY STRINGS ---");
+for (let i = 0; i < nicoArray.length; i++) {
+    if (typeof nicoArray[i] !== "string") continue;
+
+    console.log(nicoArray[i], typeof nicoArray[i]);
+}
+
+console.log("--- BREAK WITH NUMBER ---");
+for (let i = 0; i < nicoArray.length; i++) {
+    if (typeof nicoArray[i] === "number") break;
+
+    console.log(nicoArray[i], typeof nicoArray[i]);
+}
+
+
