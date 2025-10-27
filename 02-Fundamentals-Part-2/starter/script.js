@@ -263,7 +263,7 @@ console.log(nico.age);
 console.log(nico.getSummary());
 */
 
-/* Iteration: The for loop */
+/* Iteration: The for loop 
 
 // for loop keeps running while the condition is TRUE
 // for (let rep = 1; rep <= 20; rep++) {
@@ -316,5 +316,49 @@ for (let i = 0; i < nicoArray.length; i++) {
 
     console.log(nicoArray[i], typeof nicoArray[i]);
 }
+*/
 
+/* Looping backwards and loops in loops 
+const nico = [
+    "Nico",
+    "van Biljon",
+    2037 - 1991,
+    "spares coordinator",
+    ["Milton", "Wessel", "Dean"],
+    true
+];
+
+// index 0, 1, ....,4 
+// index 4, 3, ...., 0
+for (let i = nico.length - 1; i >=0; i--) {
+    console.log(nico[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`---- Starting exercise ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(` Exercise ${exercise} Lifting weight repetition ${rep} 🏋🏻‍♂️🏋🏻‍♂️`);
+    }
+}
+*/
+
+/* While loop */
+// for (let rep = 1; rep < 11; rep++) {
+//     console.log(`Lifting weights repetition ${rep}🏋🏻‍♂️`);
+// }
+
+let rep = 1;
+while (rep < 11) {
+    // console.log(`WHILE: Lifting weight repetition ${rep} 🏋🏻‍♂️`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log("Loop is about to end....");
+}
 
