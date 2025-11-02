@@ -1,6 +1,7 @@
 // Remember, we're gonna use strict mode in all scripts now!
 "use strict";
 
+/*
 // PROBLEM 1:
 // We work for a comapny building a smart home thermometer. Our most recent task is this: "Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error."
 
@@ -69,3 +70,52 @@ const calcTempAmplitudeNew = function (temp1, temp2) {
 
 const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 4]);
 console.log(amplitudeNew);
+*/
+
+/* Debugging with the console and breakpoints */
+
+const measureKelvin = function () {
+  const measurement = {
+    type: "temp",
+    unit: "celsius",
+    // C) FIX THE BUG
+    // value: prompt("Degrees celsius: "),
+    // value: Number(prompt("Degrees celsius: ")),
+    value: 10,
+  };
+
+  // B) FIND THE BUG
+  // console.log(measurement);
+  console.table(measurement);
+  // console.log(measurement.value);
+  // console.warn(measurement.value);
+  // console.error(measurement.value);
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+// A) IDENTIFY THE BUG
+console.log(measureKelvin());
+
+// Using a debugger
+const calcTempAmplitudeBug = function (temp1, temp2) {
+  const temps = temp1.concat(temp2);
+  console.log(temps);
+
+  let max = 0; // temps[0]
+  let min = 0; // temps[0]
+
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== "number") continue;
+
+    // debugger;
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+
+  console.log(max, min);
+  return max - min;
+};
+
+const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
+console.log(amplitudeBug);
