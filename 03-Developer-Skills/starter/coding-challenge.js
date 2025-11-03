@@ -36,3 +36,53 @@ const printForecast = function (arr) {
 
 printForecast(testData1);
 printForecast(testData2);
+
+/* Coding Challenge #2 With AI
+Let's say you're building a time tracking application for freelancers. At some point in building this app, you need a function that receives daily work hours for a certain week, and returns:
+1. Total hours worked
+2. Average daily hours
+3. The day with the most hours worked
+4. Number of days worked 
+5. Whether the week was full-time (worked 35 hours or more)
+
+TEST DATA: [7.5, 8, 6.5, 0, 8.5, 5, 0]
+ */
+function analyseWorkWeek(dailyHours) {
+  const dayNames = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+
+  // 1. Total hours worked
+  const totalHours = dailyHours.reduce((sum, hours) => sum + hours, 0);
+
+  // 2. Average daily hours (rounded to one decimal place)
+  const averageDailyHours = Number((totalHours / dailyHours.length).toFixed(1));
+
+  // 3. The day with the most hours worked
+  const maxHours = Math.max(...dailyHours);
+  const dayWithMostHours = dayNames[dailyHours.indexOf(maxHours)];
+
+  // 4. Number of days worked (more than 0 hours)
+  const daysWorked = dailyHours.filter((hours) => hours > 0).length;
+
+  // 5. Whether the week was full-time (35 hours or more)
+  const fullTime = totalHours >= 35;
+
+  // Return the analysis as an object
+  return {
+    totalHours,
+    averageDailyHours,
+    dayWithMostHours,
+    daysWorked,
+    fullTime,
+  };
+}
+
+const weekData = [8, 7.5, 6, 0, 9, 4, 0];
+console.log(analyseWorkWeek(weekData));
