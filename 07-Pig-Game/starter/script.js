@@ -12,12 +12,14 @@ const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 
+let scores, currentScore, activePlayer, playing;
+
 // Starting conditions
 const init = function () {
-  const scores = [0, 0]; // empty scores array to store the final score of the players
-  let currentScore = 0;
-  let activePlayer = 0;
-  let playing = true;
+  scores = [0, 0]; // empty scores array to store the final score of the players
+  currentScore = 0;
+  activePlayer = 0;
+  playing = true;
 
   score0El.textContent = 0;
   score1El.textContent = 0;
@@ -30,7 +32,7 @@ const init = function () {
   player0EL.classList.add("player--active");
   player1El.classList.remove("player--active");
 };
-init();
+init(); // Run the function
 
 // Switch players
 const switchPlayer = function () {
@@ -73,7 +75,7 @@ btnHold.addEventListener("click", function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
     // 2. Check if player's score is >= 100
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       // If yes finsih the game
       playing = false;
       diceEl.classList.add("hidden");
@@ -104,4 +106,5 @@ btnHold.addEventListener("click", function () {
 //   player1El.classList.remove("player--active");
 // });
 
-// Correct Solution
+// Correct Solution and line 15 unit line 35
+btnNew.addEventListener("click", init);
