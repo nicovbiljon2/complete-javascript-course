@@ -39,7 +39,7 @@ calcAge(1991);
 */
 
 // Hoisting and TDZ in practice
-
+/*
 // Variables
 console.log(me);
 // console.log(job); // ReferenceError - cannot access "job" before initialization
@@ -84,3 +84,38 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+*/
+
+// The "This" keyword
+// console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  // console.log(this);
+};
+calcAge(1991);
+
+const calcAgeArrow = (birthYear) => {
+  console.log(2037 - birthYear);
+  // console.log(this); // this will point back to the global scope which is window - this of the parent scope - don't gets its own this key word
+};
+calcAgeArrow(1980);
+
+const nico = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+nico.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = nico.calcAge; // copy the calcAge method from nico to matilda (method borrowing)
+matilda.calcAge();
+
+// const f = nico.calcAge;
+// f(); // undefined TypeError can't read properties "year" of undefined
