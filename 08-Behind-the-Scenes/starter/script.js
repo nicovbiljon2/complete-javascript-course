@@ -86,6 +86,7 @@ console.log(y === window.y);
 console.log(z === window.z);
 */
 
+/*
 // The "This" keyword
 // console.log(this);
 
@@ -119,3 +120,55 @@ matilda.calcAge();
 
 // const f = nico.calcAge;
 // f(); // undefined TypeError can't read properties "year" of undefined
+*/
+
+// var firstName = "Matilda";
+
+const nico = {
+  firstName: "Nico",
+  year: 1991,
+  calcAge: function () {
+    // console.log(this);
+    console.log(2037 - this.year);
+  },
+
+  // greet: () => {
+  greet: function () {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+
+    // Solution 1
+    // const self = this; // self or that
+    // const isMillenial = function () {
+    //   // console.log(this);
+    //   console.log(self);
+    //   // console.log(this.year >= 1981 && this.year <= 1996); // TypeError - connot read properties of undefined (year)
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
+
+    // Solotion 2
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+
+    isMillenial(); // is a regular function call has the this key word as undefined
+  },
+};
+nico.greet();
+nico.calcAge();
+console.log(this.firstName);
+
+// arguments keyword
+const addExpression = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpression(2, 5);
+addExpression(2, 5, 8, 12);
+
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+addArrow(2, 5, 8); // ReferenceError: arguments is not defined at addArrow
