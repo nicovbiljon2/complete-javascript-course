@@ -124,6 +124,7 @@ matilda.calcAge();
 
 // var firstName = "Matilda";
 
+/*
 const nico = {
   firstName: "Nico",
   year: 1991,
@@ -172,3 +173,25 @@ var addArrow = (a, b) => {
   return a + b;
 };
 addArrow(2, 5, 8); // ReferenceError: arguments is not defined at addArrow
+*/
+
+// Object references in practice (shallow vs. deep copies)
+
+const jessica = {
+  firstName: "Jessica",
+  LastName: "Williams",
+  age: 27,
+};
+
+function marryPerson(originalPerson, newLastName) {
+  originalPerson.LastName = newLastName;
+  return originalPerson;
+}
+
+const marriedJessica = marryPerson(jessica, "Davis");
+
+// const marriedJessica = jessica;
+// marriedJessica.LastName = "Davis";
+
+console.log("Before:", jessica);
+console.log("After:", marryPerson);
