@@ -177,21 +177,47 @@ addArrow(2, 5, 8); // ReferenceError: arguments is not defined at addArrow
 
 // Object references in practice (shallow vs. deep copies)
 
-const jessica = {
+const jessica1 = {
   firstName: "Jessica",
-  LastName: "Williams",
+  lastName: "Williams",
   age: 27,
 };
 
 function marryPerson(originalPerson, newLastName) {
-  originalPerson.LastName = newLastName;
+  originalPerson.lastName = newLastName;
   return originalPerson;
 }
 
-const marriedJessica = marryPerson(jessica, "Davis");
+const marriedJessica = marryPerson(jessica1, "Davis");
 
-// const marriedJessica = jessica;
-// marriedJessica.LastName = "Davis";
+// const marriedJessica = jessica1;
+// marriedJessica.lastName = "Davis";
 
-console.log("Before:", jessica);
-console.log("After:", marryPerson);
+console.log("Before:", jessica1);
+console.log("After:", marriedJessica);
+
+const jessica = {
+  firstName: "Jessica",
+  lastName: "Williams",
+  age: 27,
+  family: ["Alice", "Bob"],
+};
+
+// Shallow copy
+const jessicaCopy = { ...jessica };
+jessicaCopy.lastName = "Davis";
+
+// console.log(jessica, jessicaCopy);
+// jessicaCopy.family.push("Mary");
+// jessicaCopy.family.push("John");
+
+// console.log("Before:", jessica);
+// console.log("After:", jessicaCopy);
+
+// Deep copy / clone
+const jessicaClone = structuredClone(jessica);
+jessicaClone.family.push("Mary");
+jessicaClone.family.push("John");
+
+console.log("Before clone:", jessica);
+console.log("After clone:", jessicaClone);
