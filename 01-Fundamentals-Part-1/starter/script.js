@@ -88,7 +88,7 @@ const isFullAge = ageDean >= 18;
 console.log(isFullAge);
 
 console.log(now - 1991 > now - 2010);
-*/
+
 
 const now = 2037;
 const ageNico = now - 1991;
@@ -104,3 +104,70 @@ console.log(x, y);
 
 const averageAge = (ageNico + ageDean) / 2;
 console.log(ageNico, ageDean, averageAge);
+
+
+// Srings and template literals
+const firstName = "Nico";
+const job = "Spare Parts Coordinator";
+const birthYear = 1974;
+const year = 2026;
+
+const nico =
+  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+console.log(nico);
+
+const nicoNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+console.log(nicoNew);
+
+console.log(`Just a regular string....`);
+
+console.log(
+  "String with \n\
+  multiple \n\
+  lines",
+);
+
+console.log(`String
+  multiple 
+  lines`);
+ 
+const age = 15;
+//const isOldEnough = age >= 18;
+
+if (age >= 18) {
+  console.log("Sarah can start driving licence 🚗");
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+}
+
+const birthYear = 2012;
+
+let century;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(century);
+*/
+
+// type conversion
+const inputYear = "1991";
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number("Nico"));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+// type coercion
+console.log("I am " + 23 + " years old");
+console.log("23" - "10" - 3);
+console.log("23" + "10" + 3);
+console.log("23" * "2");
+
+let n = "1" + 1; // "11"
+n = n - 1; // 11 - 1
+console.log(n);

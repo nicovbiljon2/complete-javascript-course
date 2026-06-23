@@ -40,3 +40,29 @@ console.log(BMIMark1, BMIJohn1);
 
 let markHigherBMI1 = BMIMark1 > BMIJohn1;
 console.log(markHigherBMI1);
+
+/* CHALLENGE #2
+Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
+
+1. Print a nice output to the console, telling the user who has the higher BMI. The message can be either:
+
+"Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!".
+
+2. Modify the outputs above to use template literals to include the BMI values in the outputs.
+
+Example: "Mark's BMI (28.3) is higher than John's (23.9)!" or "John's BMI (29.1) is higher than Mark's (27)!".
+
+Note: Don't round the BMI values. Leave them as they are. */
+// Test data 1
+if (BMIMark > BMIJohn) {
+  console.log("Mark's BMI is higher than John's BMI !");
+} else {
+  console.log("John's BMI is higher than Mark's BMI !");
+}
+
+// Test data 2
+if (BMIMark1 < BMIJohn1) {
+  console.log(`Mark's BMI ${BMIMark1} is lower than John's BMI ${BMIJohn1}`);
+} else {
+  console.log(`John's BMI ${BMIJohn1} is lower than Mark's BMi ${BMIMark1}`);
+}
